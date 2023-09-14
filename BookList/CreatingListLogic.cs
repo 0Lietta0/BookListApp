@@ -51,6 +51,8 @@ namespace BookList
         public static void ShowBookList(List<BookModel> bookList)
         {
             Console.Clear();
+            Console.WriteLine("List of your books:");
+            Console.WriteLine();
             foreach (BookModel book in bookList)
             {
                 Console.WriteLine(book.BookFullInfo);
