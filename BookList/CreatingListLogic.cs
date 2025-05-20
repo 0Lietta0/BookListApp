@@ -24,7 +24,7 @@ namespace BookList
                 string numberOfPagesText = AskUser.GetInfoFromConsole("Write the number of pages in the book: ");
                 if (int.TryParse(numberOfPagesText, out numberOfPages))
                 {
-                    if (numberOfPages > 1 && numberOfPages < 10000)
+                    if (numberOfPages >= 1 && numberOfPages < 10000)
                     {
                         book.NumberOfPages = numberOfPages;
                     }
@@ -38,7 +38,7 @@ namespace BookList
                     Console.WriteLine("This was not a digit number.");
                 }
 
-            } while (numberOfPages == 0);
+            } while (numberOfPages < 1 || numberOfPages >= 10000);
 
             return book;
         }
